@@ -1,0 +1,51 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Urbanist:wght@400;500;600&display=swap");
+@import "tailwindcss";
+
+/*
+ * Fontes do painel, usadas como classes do Tailwind:
+ * - font-sans (padrão de todo o texto): Plus Jakarta Sans
+ * - font-display (títulos): Inter
+ * - font-urbanist (subtítulos): Urbanist
+ */
+@theme {
+  --font-sans: "Plus Jakarta Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  --font-display: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  --font-urbanist: "Urbanist", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+}
+
+/*
+ * Efeito de "carregando" enquanto os dados são atualizados.
+ * A página recebe a classe .is-refreshing e os elementos marcados reagem:
+ * - .data-text: textos com valores viram uma barra cinza pulsante
+ * - .data-viz: gráficos ficam apagados e pulsando
+ */
+@keyframes data-pulse {
+  50% {
+    opacity: 0.5;
+  }
+}
+
+.is-refreshing .data-text {
+  background-color: var(--color-slate-200);
+  border-radius: 0.25rem;
+  color: transparent;
+  user-select: none;
+  animation: data-pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+.is-refreshing .data-text * {
+  color: transparent;
+}
+
+.is-refreshing .data-viz {
+  opacity: 0.3;
+  filter: grayscale(1);
+  transition: opacity 300ms, filter 300ms;
+  animation: data-pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
