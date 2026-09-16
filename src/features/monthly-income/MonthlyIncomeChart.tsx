@@ -91,7 +91,7 @@ export default function MonthlyIncomeChart({ data }: { data: MonthlyIncome }) {
 
           {/* Linha da taxa de recuperação */}
           <svg
-            className="absolute inset-0 pl-8 pointer-events-none z-20"
+            className="absolute inset-0 pl-8 pointer-events-none z-10"
             viewBox="0 0 100 100"
             preserveAspectRatio="none"
             aria-hidden="true"
