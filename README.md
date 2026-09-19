@@ -2,15 +2,9 @@
 
 Painel web para **análise da carteira de cobrança**. Ele mostra quanto está em atraso, há quanto tempo, com quem está concentrada a dívida e quais clientes precisam de atenção primeiro.
 
-> 🔗 **Acesse o painel:** _[adicione aqui o link da Vercel]_
+> 🔗 **Acesse o painel:**[ _[adicione aqui o link da Vercel]_](https://painel-cobranca-matheuscsf.vercel.app/)
 >
 > ⚠️ Todos os dados deste projeto são **fictícios** e servem apenas para demonstração.
-
-<!--
-  Dica: adicione uma captura de tela do painel em docs/imagens/painel.png
-  e troque este comentário por:
-  ![Visão geral do painel](docs/imagens/painel.png)
--->
 
 ---
 
